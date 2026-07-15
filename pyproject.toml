@@ -1,0 +1,18 @@
+[project]
+name = "b2-object-detection-demo"
+version = "0.1.0"
+description = "Build an object-detection training set from videos with Pixeltable and Backblaze B2."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "ipykernel>=6.27",
+    "jupyterlab>=4.0",
+    "pgvector>=0.4,<0.5",
+    "pixeltable",
+    "pixeltable-yolox==0.4.2",
+    "torch>=2.0",
+    "torchvision>=0.15",
+]
+
+[tool.uv.sources]
+pixeltable = { git = "https://github.com/mkornacker/pixeltable.git", rev = "f81cf1d80b76c12985160d09bca9ead8354ccc43" }
