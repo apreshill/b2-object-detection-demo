@@ -66,4 +66,4 @@ The Pixeltable guide to [uploading media to S3 and other cloud storage](https://
 
 This demo includes an early preview of `pxt schema update`. Class-based schemas are already available in Pixeltable. The new command reads a class-based schema from a Python file, then creates or updates the matching tables and views.
 
-The uv environment uses Pixeltable commit `f81cf1d8` from the `mkornacker/pixeltable` webinar branch so you can try the command now. The lock file pins that commit and the rest of the Python environment.
+The uv environment installs the current development version of Pixeltable from the [main GitHub repository](https://github.com/pixeltable/pixeltable), so you can try the command now.
