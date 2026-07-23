@@ -28,17 +28,17 @@ class Videos(TableModel, name="videos"):
     """Source videos; insert local files or S3/HTTP URLs."""
 
     video: pxt.Required[pxt.Video]
-    metadata = pxtf.video.get_metadata(video)  # noqa: F821
+    metadata = pxtf.video.get_metadata(video)
 
 
 class Frames(TableModel, name="frames", base=Videos, iterator=pxtf.video.frame_iterator(Videos.video, fps=1.0)):
     """One row per extracted frame; the frame image is unstored and extracted on demand."""
 
     # Pseudo-labels: {'bboxes': [[x1, y1, x2, y2], ...], 'scores': [...], 'labels': [...]}.
-    detections = pxtf.yolox.yolox(frame, model_id="yolox_s", threshold=0.5)  # noqa: F821
+    detections = pxtf.yolox.yolox(frame, model_id="yolox_s", threshold=0.5)
     num_detections = detections.bboxes.len()
     overlay = Column(
-        value=pxtf.vision.bboxes_draw(frame, detections.bboxes, labels=detections.labels),  # noqa: F821
+        value=pxtf.vision.bboxes_draw(frame, detections.bboxes, labels=detections.labels),
         destination=B2_FRAMES_OVERLAY_DEST,
     )
 
@@ -57,6 +57,6 @@ class TrainingFrames(TableModel, name="training_frames", base=Frames.where(Frame
     )
     labels = Frames.detections.labels
     training_overlay = Column(
-        value=pxtf.vision.bboxes_draw(image, boxes, labels=labels),  # noqa: F821
+        value=pxtf.vision.bboxes_draw(image, boxes, labels=labels),
         destination=B2_TRAINING_OVERLAY_DEST,
     )

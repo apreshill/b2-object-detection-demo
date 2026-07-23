@@ -62,8 +62,8 @@ This demo uses the same Pixeltable and B2 setup shown in [Backblaze B2 and Pixel
 
 The Pixeltable guide to [uploading media to S3 and other cloud storage](https://docs.pixeltable.com/howto/cookbooks/data/data-export-s3) explains per column destinations, global destination settings, supported storage providers, file URLs, and signed URLs.
 
-## Early preview
+## Schema update
 
-This demo includes an early preview of `pxt schema update`. Class-based schemas are already available in Pixeltable. The new command reads a class-based schema from a Python file, then creates or updates the matching tables and views.
+This demo uses Pixeltable class-based schemas with `pxt schema update`. That command reads the schema from `schema.py`, then creates or updates the matching tables and views.
 
-The uv environment installs the current development version of Pixeltable from the [main GitHub repository](https://github.com/pixeltable/pixeltable), so you can try the command now.
+The uv environment installs Pixeltable from PyPI.

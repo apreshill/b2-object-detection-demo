@@ -8,11 +8,8 @@ dependencies = [
     "boto3>=1.36",
     "ipykernel>=6.27",
     "jupyterlab>=4.0",
-    "pixeltable",
+    "pixeltable>=0.6.8",
     "pixeltable-yolox==0.4.2",
     "torch>=2.0",
     "torchvision>=0.15",
 ]
-
-[tool.uv.sources]
-pixeltable = { git = "https://github.com/pixeltable/pixeltable.git" }

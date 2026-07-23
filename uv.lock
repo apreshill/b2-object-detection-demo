@@ -311,7 +311,7 @@ requires-dist = [
     { name = "boto3", specifier = ">=1.36" },
     { name = "ipykernel", specifier = ">=6.27" },
     { name = "jupyterlab", specifier = ">=4.0" },
-    { name = "pixeltable", git = "https://github.com/pixeltable/pixeltable.git" },
+    { name = "pixeltable", specifier = ">=0.6.8" },
     { name = "pixeltable-yolox", specifier = "==0.4.2" },
     { name = "torch", specifier = ">=2.0" },
     { name = "torchvision", specifier = ">=0.15" },
@@ -2257,8 +2257,8 @@ wheels = [
 
 [[package]]
 name = "pixeltable"
-version = "0.6.8.dev9+7a4e9a52"
-source = { git = "https://github.com/pixeltable/pixeltable.git#7a4e9a52e7cfa5c1cb723f3ecfa15bb541067284" }
+version = "0.6.8"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
     { name = "av", version = "17.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
@@ -2266,6 +2266,7 @@ dependencies = [
     { name = "beautifulsoup4" },
     { name = "cloudpickle" },
     { name = "deprecated" },
+    { name = "fasteners" },
     { name = "ftfy" },
     { name = "httpcore" },
     { name = "httpx" },
@@ -2296,6 +2297,9 @@ dependencies = [
     { name = "tenacity" },
     { name = "toml" },
     { name = "tzlocal" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/30/86/94a2048d2f957ccb55facf5022b83ea9296547298f42cc3dfa743538837b/pixeltable-0.6.8-py3-none-any.whl", hash = "sha256:7963a9b94dbb949a59257368117b91561a4b25533205b2066d0b26ed88b19ecb", size = 1142850, upload-time = "2026-07-20T20:37:09.772Z" },
 ]
 
 [[package]]
